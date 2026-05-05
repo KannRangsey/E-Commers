@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            background-color: white;
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            padding: 10px;
+            gap: 25px;
+        }
+
+        .menu li a {
+            text-decoration: none;
+        }
+
+        .menu li a i {
+            margin-right: 5px;
+        }
+
+        .menu li a:hover {
+            background-color: orange;
+            width: 100%;
+            padding: 5px;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            padding: 10px;
+            size: 24px;
+        }
+
+        .logo h1 {
+            padding: 5px;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .menu {
+                display: none;
+                background-color: white;
+                position: absolute;
+                margin-top: 350px;
+                box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+                left: 0px;
+                width: 93%;
+                z-index: 1;
+                padding: 10px;
+                flex-direction: column;
+            }
+
+            .menu li {
+                padding: 10px;
+                align-items: center;
+            }
+
+            .menu li a {
+                text-align: center;
+
+            }
+
+            .menu-icon {
+                display: block;
+                padding: 10px;
+            }
+
+            .menu.active {
+                display: block;
+            }
+        }
+      
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>logo</h1>
+        </div>
+        <div class="menu-icon" id="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul class="menu" id="menu">
+            <li>
+                <a href=""><i class="fa-solid fa-house"></i> Home</a>
+            </li>
+            <li>
+                <a href=""><i class="fa-solid fa-info"></i> About</a>
+            </li>
+            <li>
+                <a href=""><i class="fa-solid fa-phone"></i> Contact</a>
+            </li>
+            <li>
+                <a href=""> <i class="fa-solid fa-user"></i>Login</a>
+            </li>
+            <li>
+                <a href=""> <i class="fa-solid fa-shopping-cart"></i>Cart</a>
+            </li>
+        </ul>
+    </div>
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const menu = document.getElementById('menu');
+        menuIcon.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        })
+    </script>
+</body>
+
+</html>
