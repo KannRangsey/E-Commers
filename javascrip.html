@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Score 3 Subjects</title>
+</head>
+
+<body>
+
+    <script>
+        let score1 = parseFloat(prompt("Enter score 1:"));
+        let score2 = parseFloat(prompt("Enter score 2:"));
+        let score3 = parseFloat(prompt("Enter score 3:"));
+
+        let total = score1 + score2 + score3;
+        let average = total / 3;
+
+        document.write("<h2>Result</h2>");
+        document.write("Score 1: " + score1 + "<br>");
+        document.write("Score 2: " + score2 + "<br>");
+        document.write("Score 3: " + score3 + "<br>");
+        document.write("Total: " + total + "<br>");
+        document.write("Average: " + average + "<br>");
+
+        if (average >= 50) {
+            document.write("<h3 style='color:green;'>Pass</h3>");
+        } else {
+            document.write("<h3 style='color:red;'>Fail</h3>");
+        }
+    </script>
+
+</body>
+
+</html>
